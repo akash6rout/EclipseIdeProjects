@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1 style="color:red;text-align:center">All Form Comps Based Customer Registration Page</h1>
+<form action="processurl" method="post">
+<table border="1" align="center" bgcolor="cyan">
+<tr>
+<td>Customer Name::</td>
+<td><input type="text" name="cname"></td>
+</tr>
+
+<tr>
+<td>Customer Age::</td>
+<td><input type="password" name="cage"></td>
+</tr>
+
+<tr>
+<td>Customer Address::</td>
+<td><textarea name="cadd" rows="5" cols="15">
+	enter ur address
+</textarea></td>
+</tr>
+
+<tr>
+<td>Gender::</td>
+<td><input type="radio" name="gender" value="M">Male
+&nbsp;&nbsp; <input type="radio" name="gender" value="F" checked>FeMale
+</td>
+</tr>
+<tr>
+<td>Marital Status::</td>
+<td><input type="checkbox" name="ms" value="married">Marital Status
+</td>
+</tr>
+
+<tr>
+<td>Qualification::</td>
+<td><select name="qlfy">
+	<option value="" selected>--select a value--</option>
+	<option value="engg">B.E/B.Tech</option>
+	<option value="medico">MBBS</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Hobies::</td>
+<td><input type="checkbox" name="hb" value="book" checked>Reading Books &nbsp; &nbsp;
+	<input type="checkbox" name="hb" value="TV">TV watching &nbsp; &nbsp; <br>
+	<input type="checkbox" name="hb" value="games">Playing Games &nbsp;&nbsp;
+	<input type="checkbox" name="hb" value="stams">Stamp Collection &nbsp; &nbsp;
+
+</td>
+</tr>
+<tr>
+<td>Favcousine::</td>
+<td>
+<select name="favCousine" multile>
+	<option value="india" >Indian</option>
+	<option value="china" >Chinese</option>
+	<option value="arabia">Arabian</option>
+	<option value="continental" selected>Continental</option>
+	<option value="asian" >Asian</option>
+	<option value="thai">Thailand</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Favorite Color::</td>
+<td><input type="color" name="favColor"></td>
+</tr>
+
+<tr>
+<td>Lucky Number::</td>
+<td><input type="number" name="LuckyNo"></td>
+</tr>
+<tr>
+<td>Salary::</td>
+<td><input type="range" name="salary" min="10000" max="100000"></td>
+</tr>
+<tr>
+<td>Email Id::</td>
+<td><input type="email" name="mail"></td>
+</tr>
+<tr>
+<td>Date of Birth::</td>
+<td><input type="date" name="dob" value="2022-11-14" min="1970-01-01" max="2022-11-14"></td>
+</tr>
+<tr>
+<td>Time of birth::</td>
+<td><input type="time" name="tob"></td>
+</tr>
+<tr>
+<td>Date and Time Joining::</td>
+<td><input type="datetime-local" name="doj"></td>
+</tr>
+<tr>
+<td>Contact Number::</td>
+<td><input type="tel" name="mobileNo"></td>
+</tr>
+<tr>
+<td>Elegritic Month::</td>
+<td><input type="month" name="eMonth"></td>
+</tr>
+<tr>
+<td>Fav weekDay::</td>
+<td><input type="week" name="favWeek"></td>
+</tr>
+<tr>
+<td>FB Url::</td>
+<td><input type="url" name="fbUrl"></td>
+</tr>
+<tr>
+<td>Google Search String::</td>
+<td><input type="search" name="sString"></td>
+</tr>
+<tr>
+<td><input type="image" src="image/imgreg.png" width="50" heigth="20"></td>
+<td><input type="reset" value="cancel"></td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+</html>
