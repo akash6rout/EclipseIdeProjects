@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        h2{
+            margin: 0px 0px 10px 0px;
+        }
+        input{
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        #form-container{
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+            border-radius: 50px;
+        }
+        input[type="submit"]{
+            width: 200px;
+            background-color: rgba(15, 15, 189, 0.699);
+            border: 0px;
+            color: white;
+        }
+        .error{
+            color: red;
+            margin: 0px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h2>Login</h2>
+        <form action="loginurl" onsubmit="return validateform()" method="POST" >
+            <input type="text" placeholder="username" id="username" name="username" onblur="funchklen(this.value.length,'username')"><br><br>
+            <p id="usererror" class="error"></p>
+            <input type="password" placeholder="password" id="password" name="password" onblur="funchklen(this.value.length,'password')"><br><br>
+            <p id="passerror" class="error"></p>
+            <input type="submit">
+        </form>
+    </div>
+    
+</body>
+<script>
+    //let username = document.getElementById("username");
+    //let password= document.getElementById("username");
+    let flag = 1;
+
+    function validateform(){
+        if(username.value == ""){
+            document.getElementById("usererror").innerHTML = "User Name is empty";
+            flag=0;
+        }
+        else if(username.value.length < 3){
+            document.getElementById("usererror").innerHTML = "User Name require min 3 char";
+            flag=0;
+        }
+        else{
+            document.getElementById("usererror").innerHTML = "";
+            flag=1;
+        }
+        if(password.value == ""){
+            document.getElementById("passerror").innerHTML = "Password is empty";
+            flag=0;
+        }
+        else if(password.value.length < 4 ){
+        	document.getElementById("usererror").innerHTML = "User Password require min 4 char";
+            flag=0;
+        }
+        
+        else{
+            document.getElementById("passerror").innerHTML = "";
+            flag=1;
+        }
+        if(flag){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }
+    function funchklen(len,cid){
+        if(len<4) {
+            document.getElementById(cid).style.borderColor="red"
+        }
+        else{
+            document.getElementById(cid).style.borderColor="green"
+        }
+    }
+</script>
+</html>

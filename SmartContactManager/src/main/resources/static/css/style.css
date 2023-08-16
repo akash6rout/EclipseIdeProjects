@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+body{
+	background:gray;
+}
+.banner{
+	width:100%;
+	height:93vh;
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/contact.jpg);
+	background-size:cover;
+	color:white;
+}
+.my-card{
+	padding:20px;
+	background:#ffffff;
+}

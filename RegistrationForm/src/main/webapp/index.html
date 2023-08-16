@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login here</title>
+</head>
+<body style="text-align: center;">
+	<h1>Login Here</h1>
+	<form action="loginservleturl" method="post">
+		<p>Enter Your Name</p>
+		<input type="text" name="name" id="name"
+			onblur="funchklen(this.value.length,'name')"
+			placeholder="Enter your name">
+		<p>Enter Your Password</p>
+		<input type="password" name="name" id="password"
+			onblur="funchklen(this.value.length,'password')"
+			placeholder="Enter your password"> <br>
+		<br> <input type="submit" value="Login" class="input"> <br>
+		<a href="registration.html"><input type="button"
+			value="Registration" class="input"></a>
+
+	</form>
+	<script>
+		function funchklen(len, cid) {
+			if (len < 4) {
+				document.getElementById(cid).style.borderColor = "red"
+			} else {
+				document.getElementById(cid).style.borderColor = "green"
+			}
+		}
+		document.querySelector("#name").onkeypress = function(name) {
+			let ch = name.which;
+			console.log(ch);
+			if (!((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || ch == 32))
+				name.preventDefault();
+		};
+	</script>
+</body>
+</html>
